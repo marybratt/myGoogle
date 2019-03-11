@@ -1,3 +1,12 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(productsans-regular.ttf);
+}
+body {
+    font-family: myFirstFont, Arial, sans-serif;
+    opacity: 0.65;
+}
+
 .navbar {
     position: absolute;
     top: 0;
@@ -8,51 +17,56 @@
 .navbar {
     display: grid;
     width: 100%;
-    grid-template-columns: 50px 50px 2fr 50px 50px 25px 25px 25px 10px;
-    grid-gap: 20px;
-    padding: 10px 10px;
+    height: 3em;
+    grid-template-columns: 50px 50px 2fr 50px 50px 50px 50px 50px 50px;
+    grid-gap: 5px;
+    margin-left: 20px;
+    padding: 5px 5px;
 }
 
 .about {
     grid-column: 1;
-    vertical-align: top;
-    font-size: 1.25em;
+    align-self: center; 
+    font-size: 13.5px;
     text-align: center;
     padding: 1px;
+    font-stretch: ultra-condensed;
 }
 
 .store {
     grid-column: 2;
-     vertical-align: top;
-    font-size: 1.25em;
+    align-self: center;
+    font-size: 13.5px;
     text-align: center;
     padding: 1px;
+    font-stretch: ultra-condensed;
 }
 
 .gmail {
     grid-column: 4;
-     vertical-align: top;
-    font-size: 1.25em;
+    align-self: center;
+    font-size: 13.5px;
     text-align: center;
     padding: 1px;
+    font-stretch: ultra-condensed;
 }
 
 .images {
-     vertical-align: top;
     grid-column: 5;
-    font-size: 1.25em;
+    align-self: center;
+    font-size: 13.5px;
     text-align: center;
     padding: 1px;
+    font-stretch: ultra-condensed;
 }
 
 .table {
-     vertical-align: top;
-    align-content: right;
     grid-column: 6;
     width: 2em;
     height: 2em;
-    padding: 1px 0 0 5px;
+    padding: 12.5px 0 0 5px;
     grid-column-gap: 0;
+    
 }
 
 th,
@@ -61,88 +75,160 @@ td {
     padding: 3px 3px;
     border-spacing: 5px;
     border-color: white;
+    align-self: end;
 }
 
 
 .bell {
-     vertical-align: top;
     grid-column: 7;
     border-radius: 50%;
-    width: 2em;
-    height: 2em;
-    padding: 1px;
-      grid-column-gap: 0;
+    width: 1.5em;
+    height: 1.5em;
+    padding: 12px 0 0 0;
+    grid-column-gap: 0;
+    align-self: end;
 }
 
 .photo {
-     vertical-align: top;
     grid-column: 8;
     width: 2em;
     height: 2em;
     border-radius: 50%;
-    padding: 1px;
-      grid-column-gap: 0;
-    margin-right: 15px;
-    }
+    padding: 10px 0 0 0;
+    grid-column-gap: 0;
+    align-self: end;
+}
 
 
-.logo img {
+.logo {
+    font-family: myFirstFont;
+/*    opacity: 0.60;*/
     position: absolute;
-    top: 100px;
-    left: 500px;
-    max-width: 50%;
+    display: flex;
+    flex-direction: row;
+    top: 200px;
+    left: 600px;
+    justify-content: center;
+    height: 100px;
     z-index: 1;
 }
 
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;
+.logo div {
+    width: auto;
+/*    padding: 1px;*/
+    text-align: center;
+    line-height: 70px;
 }
 
 
-.search {
+.g {
+    height: 90px;
+    font-weight: bolder;
+    color: blue;
+    font-size: 550%;
+    font-stretch: ultra-expanded;
+    
+}
+
+.o {
+    height: 90px;
+    color: red;
+    font-size: 500%;
+    font-weight: bolder;
+    font-stretch: ultra-expanded
+}
+
+.o2 {
+    height: 90px;
+    color: orange;
+    font-size: 500%;
+     font-weight: bolder;
+    font-stretch: ultra-expanded
+}
+
+.g2 {
+    height: 90px;
+    color: blue;
+    font-size: 500%;
+     font-weight: bolder;
+    font-stretch: ultra-expanded
+}
+
+.l {
+    height: 90px;
+    color: green;
+    font-size: 500%;
+     font-weight: bolder;
+    font-stretch: ultra-expanded
+}
+
+.e {
+    height: 90px;
+    color: red;
+    font-size: 500%;
+    transform: rotate(-20deg);
+     font-weight: bolder;
+    font-stretch: ultra-expanded
+}
+
+div .search:hover{
+    box-shadow: 2px 2px 1px lightgray, -.5px -.5px .5px lightgray;
+    
+}
+
+div .search {
     position: absolute;
-    top: 400px;
-    left: 400px;
+    top: 300px;
+    left: 450px;
     width: 600px;
-    height: 3em;
+    height: 3.5em;
+    border-radius: 2em;
+    border: 1px solid lightgray;
+/*    border-color: */
     z-index: 2;
 }
 
+
 .microphone {
     position: absolute;
-    top: 410px;
-    left: 975px;
+    top: 310px;
+    left: 1025px;
     height: 1.5em;
     width: .75em;
     z-index: 3;
 }
 
+.button .button1:hover {
+    border: 1px solid gray;
+}
+
 .button1 {
     position: absolute;
     border: none;
-    top: 450px;
-    left: 450px;
+    top: 350px;
+    left: 600px;
     margin: 10px;
     padding: 10px;
-    width: 200px;
+    width: auto;
     z-index: 4;
+}
+
+.button .button2:hover {
+    border: 1px solid gray;
 }
 
 
 .button2 {
     position: absolute;
     border: none;
-    top: 450px;
-    left: 700px;
+    top: 350px;
+    left: 750px;
     margin: 10px;
     padding: 10px;
-    width: 200px;
+    width: auto;
     z-index: 5;
 }
+
 
 
 .footer {
@@ -151,45 +237,60 @@ td {
     bottom: 0;
     left: 0;
     background-color: #efefef;
+    width: 105%;
+    height: 2em;
 }
 
 .footer {
     display: grid;
-    align-content: center;
-    grid-template-columns: 100px 100px 800px 100px 100px 100px 100px;
+    align-content: end;
+    grid-template-columns: 100px 100px 1000px 100px 100px 100px 100px;
     grid-row: 10px;
-    grid-gap: 20px;
-    margin: 20px;
-    padding: 10px 10px;
 }
-
 
 .advertising {
     grid-column: 1;
-    font-size: 1.25em;
+    align-self: center;
+    margin-left: 20px;
+    font-size: 13.5px;
+    padding: 1px;
     text-align: center;
+    font-stretch: ultra-condensed;
 }
 
 .business {
     grid-column: 2;
-    font-size: 1.25em;
+    align-self: center;
+    font-size: 13.5px;
     text-align: center;
+    padding: 1px;
+    font-stretch: ultra-condensed;
 }
 
 .privacy {
     grid-column: 4;
-    font-size: 1.25em;
+    align-self: center;
+    font-size: 13.5px;
     text-align: center;
+    padding: 1px;
+    font-stretch: ultra-condensed;
 }
 
 .terms {
     grid-column: 5;
-    font-size: 1.25em;
+    align-self: center;
+    font-size: 13.5px;
     text-align: center;
+    padding: 1px;
+    font-stretch: ultra-condensed;
 }
 
 .settings {
     grid-column: 6;
-    font-size: 1.25em;
+    align-self: center;
+    font-size: 13.5px;
     text-align: center;
+    padding: 1px;
+    font-stretch: ultra-condensed;
 }
+
